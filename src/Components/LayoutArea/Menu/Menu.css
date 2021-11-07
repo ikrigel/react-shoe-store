@@ -1,8 +1,0 @@
-.Menu {
-	display: flex;
-    flex-direction: column;
-}
-
-.Menu > a {
-    margin-top: 20px;
-}

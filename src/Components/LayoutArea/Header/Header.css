@@ -1,8 +1,0 @@
-.Header {
-    height: 100%;
-
-    /* Center Vertical: */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;	
-}
