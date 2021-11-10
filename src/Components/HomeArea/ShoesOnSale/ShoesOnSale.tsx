@@ -11,7 +11,10 @@ function ShoesOnSale(): JSX.Element {
   return (
     <div className="ShoesOnSale Box">
       <p>
-        Our Shoes:{" "}
+
+
+
+        Our Shoes:
         <ul>
           {items.map((item) => (
             <li>

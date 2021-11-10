@@ -1,4 +1,6 @@
+import Clock from "../../HomeArea/Clock/Clock";
 import Home from "../../HomeArea/Home/Home";
+
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Menu from "../Menu/Menu";
@@ -9,6 +11,7 @@ function Layout(): JSX.Element {
     <div className="Layout">
       <header>
         <Header />
+        
       </header>
       <main>
         <Home />
@@ -18,6 +21,7 @@ function Layout(): JSX.Element {
       </aside>
       <footer>
         <Footer />
+        
       </footer>
     </div>
   );
