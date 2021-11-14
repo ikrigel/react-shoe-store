@@ -11,11 +11,20 @@ import Source from "../../../Assets/Images/Source.jpg";
 import UnderArmour from "../../../Assets/Images/Under-Armour.jpg";
 import RandomProduct from "../RandomProduct/RandomProduct";
 import Clock from "../Clock/Clock";
+import RandomBrand from "../RandomBrand/RandomBrand";
+import RandomShoes from "../RandomShoes/RandomShoes";
+import RssEnhancer from "../../LayoutArea/RssEnhancer/RssEnhancer";
 
 function Home(): JSX.Element {
   return (
     <div className="Home ">
+      <br />
+      <RssEnhancer label={"http://www.ynet.co.il/Integration/StoryRss1854.xml"} />
+      <br />
       <RandomProduct />
+      {/* Lifecycle Hooks */}
+      <RandomBrand />
+      <RandomShoes />
       <br />
       <Clock />
       <br />
@@ -31,8 +40,6 @@ function Home(): JSX.Element {
       <Shoes brand="Source" size={41} price={99} picture={Source} />
       <Shoes brand="Under Armour" size={42} price={170} picture={UnderArmour} />
       <br />
-
-
 
 
     </div>

@@ -1,43 +1,42 @@
-import React from "react";
 import { Component } from "react";
-import ReactDOM from "react-dom";
 import "./Clock.css";
+interface ClockProps {
 
-interface ClockState {
-    id: number;
-    name: string;
 }
 
-class Clock extends Component<{}, ClockState[]> {
+interface ClockState {
+    time: string;
+}
 
+class Clock extends Component<ClockProps, ClockState> {
 
-    public constructor(props: {}) {
+    private timerId: number;
+
+    public constructor(props: ClockProps) {
         super(props);
-
+        this.state = { time: this.getTime() };
+    }
+    getTime() {
+        const now = new Date();
+        return now.toLocaleTimeString();
     }
 
 
-
-
-    updateMe() {
-        setInterval(() => { this.setState({}) }, 1000)
+    // componentDidMount - performs once, can do side-effects:
+    public componentDidMount(): void {
+        this.timerId = window.setInterval(() => this.setState({ time: this.getTime() }), 1000);
     }
-    private ranNum = 0;
 
-
-    private tick = () => {
-        const element = (
-            <div>
-
-                <span><h2> {new Date().toLocaleTimeString()}</h2></span>
-
-            </div>
-        );
-        ReactDOM.render(
-            element,
-            document.getElementById('Clock1')
-        );
+    // componentDidUpdate - performs whenever props or state changes, can do side-effects:
+    public componentDidUpdate(prevProps: ClockProps, prevState: ClockState): void {
+        // ...
     }
+
+    // componentWillUnmount - performs once just before component destroyed, can do side-effects:
+    public componentWillUnmount(): void {
+        window.clearInterval(this.timerId);
+    }
+
 
 
 
@@ -45,9 +44,9 @@ class Clock extends Component<{}, ClockState[]> {
 
     public render(): JSX.Element {
         return (
-            <div className="Clock Box" id="Clock1">
+            <div className="Clock Box" >
                 <p>
-                    {setInterval(this.tick, 1000)}
+                    {this.state.time}
                 </p>
             </div>
         );
