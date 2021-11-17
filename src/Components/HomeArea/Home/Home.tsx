@@ -14,6 +14,7 @@ import Clock from "../Clock/Clock";
 import RandomBrand from "../RandomBrand/RandomBrand";
 import RandomShoes from "../RandomShoes/RandomShoes";
 import RssEnhancer from "../../LayoutArea/RssEnhancer/RssEnhancer";
+import RandomShoes2 from "../RandomShoes2/RandomShoes2";
 
 function Home(): JSX.Element {
   return (
@@ -25,6 +26,7 @@ function Home(): JSX.Element {
       {/* Lifecycle Hooks */}
       <RandomBrand />
       <RandomShoes />
+      <RandomShoes2/>
       <br />
       <Clock />
       <br />
