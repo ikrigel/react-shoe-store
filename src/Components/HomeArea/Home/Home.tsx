@@ -24,14 +24,17 @@ function Home(): JSX.Element {
       <br />
       <RandomProduct />
       {/* Lifecycle Hooks */}
+      {/* HOC */}
       <RandomBrand />
       <RandomShoes />
       <RandomShoes2/>
       <br />
+      {/* HOC */}
       <Clock />
       <br />
       <Specials />
       <br />
+      {/* CSS Modules */}
       <YouTube />
       <br />
       <ShoesOnSale />

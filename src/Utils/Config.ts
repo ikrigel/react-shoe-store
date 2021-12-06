@@ -6,7 +6,9 @@ abstract class Config {
         employees: "",
         employeesImages: "",
         coins: "",
-        coinsImages: ""
+        coinsImages: "",
+        register: "",
+        login: ""
     }
 
     public constructor(baseUrl: string) {
@@ -16,6 +18,8 @@ abstract class Config {
             productsDelayed: baseUrl + "products/delayed/",
             employees: baseUrl + "employees/",
             employeesImages: baseUrl + "employees/images/",
+            register: baseUrl + "auth/register/",
+            login: baseUrl + "auth/login/",
             coins: "https://api.coingecko.com/api/v3/coins/",
             coinsImages: "https://api.coingecko.com/api/v3/coins/"
           
@@ -31,7 +35,9 @@ class DevelopmentConfig extends Config {
 
 class ProductionConfig extends Config {
     public constructor() {
-        super("https://www.northwind.com/api/");
+        // super("https://www.northwind.com/api/");
+        super("http://localhost:3030/api/");
+
     }
 }
 

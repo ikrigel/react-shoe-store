@@ -1,4 +1,5 @@
 import { Component } from "react";
+import BackColorRandom from "../BackColorRandom/BackColorRandom";
 import "./Clock.css";
 interface ClockProps {
 
@@ -44,7 +45,7 @@ class Clock extends Component<ClockProps, ClockState> {
 
     public render(): JSX.Element {
         return (
-            <div className="Clock Box" >
+            <div className="Clock " >
                 <p>
                     {this.state.time}
                 </p>
@@ -53,4 +54,4 @@ class Clock extends Component<ClockProps, ClockState> {
     }
 }
 
-export default Clock;
+export default BackColorRandom(Clock);

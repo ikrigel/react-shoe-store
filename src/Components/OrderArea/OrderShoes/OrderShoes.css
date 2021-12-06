@@ -1,0 +1,14 @@
+.OrderShoes {
+	width: 450px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.OrderShoes > .Header {
+    text-align: center;
+}
+
+.OrderShoes .TextBox {
+    width: 100%;
+    margin: 5px 0;
+}

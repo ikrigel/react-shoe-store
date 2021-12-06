@@ -1,15 +1,16 @@
-import "./YouTube.css";
+import css from "./YouTube.module.css";
 
 function YouTube(): JSX.Element {
   return (
-    <div className="YouTube Box">
-      <div>
+    <div className={css.position +css.BackColor+" Box"}>
+      <div className={css.LargeText}>
+        Billie
         <p>
-          <iframe
+          <iframe 
             width="790"
             height="444"
             src="https://www.youtube.com/embed/EvdzQdnZPcw"
-            title="YouTube video player"
+            title ="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

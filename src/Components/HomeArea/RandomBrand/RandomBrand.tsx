@@ -5,6 +5,7 @@ import Nike from "../../../Assets/Images/Nike-logo.jpg";
 import NB from "../../../Assets/Images/NB-logo.jpg";
 import Saucony from "../../../Assets/Images/Saucony-logo.jpg";
 import Adidas from "../../../Assets/Images/Adidas-logo.jpg";
+import BackColorRandom from "../BackColorRandom/BackColorRandom";
 
 interface RandomBrandState {
     randomBrand: string;
@@ -41,11 +42,11 @@ class RandomBrand extends Component<{}, RandomBrandState> {
 
     public render(): JSX.Element {
         return (
-            <div className="RandomBrand Box">
+            <div className="RandomBrand ">
                 <p><img className="RandomBrandImg" src={this.state.randomBrand} alt="Brands" /></p>
             </div>
         );
     }
 }
 
-export default RandomBrand;
+export default BackColorRandom(RandomBrand);

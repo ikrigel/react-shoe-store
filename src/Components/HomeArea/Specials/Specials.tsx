@@ -1,8 +1,9 @@
+import BackColorByHour from "../BackColorByHour/BackColorByHour";
 import "./Specials.css";
 
 function Specials(): JSX.Element {
     return (
-        <div className="Specials Box">
+        <div className="Specials ">
 			
             <p>
                 Our Specials:
@@ -25,4 +26,4 @@ function isSundayOrMonday(): boolean {
     return (dayOfWeek === 1 ||dayOfWeek === 2);
     
 }
-export default Specials;
+export default BackColorByHour(Specials);

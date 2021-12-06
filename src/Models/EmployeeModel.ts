@@ -7,6 +7,7 @@ class EmployeeModel {
   public city: string;
   public birthDate: string;
   public imageName: string;
+  public image: FileList;
 }
 
 export default EmployeeModel;
