@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Install  northwind back end from npm - "https://www.npmjs.com/package/northwind-back-end"
+
 ## Available Scripts
 
 In the project directory, you can run:
